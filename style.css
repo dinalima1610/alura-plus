@@ -61,7 +61,11 @@ body {
   background-color: blue;
 }
 
-.botao_secundario {
+.botao__primario {
+    border: 2px solid var(--botao-azul);
+}
+
+.botao__secundario {
     background-color: transparent;
     border: 2px solid var(--cinza-sencundario);
 }
@@ -107,7 +111,7 @@ body {
 .dispositivos__lista {
     display: flex;
     justify-content: center;
-     list-style-type: none;
+    list-style-type: none;
     margin: 5em 0;
 }
 
@@ -161,4 +165,96 @@ body {
 
 .lista__link a:active {
     color: purple;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        margin-right: 0.5rem;
+    }
+
+    h1 {
+        font-size: 0.8rem; /* Reduz o tamanho do título em telas pequenas (menos de 600px) */
+    }
+    
+    a {
+        font-size: 0.8rem; /* Reduz o tamanho dos links em telas pequenas (menos de 600px) */
+    }
+
+    img {
+        width: 100%; /* Faz as imagens ocuparem toda a largura disponível em telas pequenas */
+        height: auto; /* Mantém a proporção das imagens */
+    }
+
+    .descricao__titulo, .dispositivos__titulo{
+        font-size: 1.7rem;
+    }
+
+    .container {
+        grid-template-columns: 100%; /* Altera para uma coluna única em telas pequenas */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo em telas pequenas */
+    }
+    
+    .principal {
+        background-position-y: 25%;
+    }
+
+    .secundario {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container__caixa {
+        margin: 0 1rem;
+    }
+
+    .container__titulo {
+        display: table-caption;
+    }
+
+    .secundario__imagem {
+        width: 100%;
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    .container__descricao {
+        padding: 0 1rem 0 1rem;
+    }
+
+    .combo {
+        padding-top: 5rem;
+    }
+
+    .notebook {
+        padding-top: 5rem;
+    }
+
+    .dispositivos {
+        padding-top: 5rem;
+    }
+
+    .dispositivos__lista {
+        flex-direction: column; /* Alinha os itens da lista verticalmente em telas pequenas */
+        gap: 0.5rem; /* Adiciona um pequeno espaço entre os itens */
+        margin-top: 1rem;
+    }
+    .rodape__lista {
+        flex-direction: column; /* Alinha os itens da lista verticalmente em telas pequenas */
+        gap: 0.5rem; /* Adiciona um pequeno espaço entre os itens */
+    }
+
+    .lista__link a {
+        font-size: 0.8rem;
+        padding-top: 3rem;
+    }
+
+    .rodape {
+        margin: 1rem 1rem;
+    }
+
+    .rodape__texto {
+        font-size: 0.7rem;
+        padding-top: 2rem;
+    }
 }
